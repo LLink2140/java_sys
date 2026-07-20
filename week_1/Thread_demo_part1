@@ -1,0 +1,51 @@
+public class BankWithoutThread {
+
+    public static void main(String[] args) {
+
+        long start = System.currentTimeMillis();
+
+        loadCustomerProfile();
+        loadAccountBalance();
+        loadTransactions();
+        loadLoanInformation();
+        loadFraudDetection();
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("--------------------------------");
+        System.out.println("Dashboard Loaded");
+        System.out.println("Total Time : " + (end - start) + " ms");
+    }
+
+    static void loadCustomerProfile() {
+        delay(2000);
+        System.out.println("/ Customer Profile Loaded");
+    }
+
+    static void loadAccountBalance() {
+        delay(2000);
+        System.out.println("/ Account Balance Loaded");
+    }
+
+    static void loadTransactions() {
+        delay(2000);
+        System.out.println("/ Transactions Loaded");
+    }
+
+    static void loadLoanInformation() {
+        delay(2000);
+        System.out.println("/ Loan Information Loaded");
+    }
+
+    static void loadFraudDetection() {
+        delay(2000);
+        System.out.println("/ Fraud Detection Completed");
+    }
+
+    static void delay(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+        }
+    }
+}
